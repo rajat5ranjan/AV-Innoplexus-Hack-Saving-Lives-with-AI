@@ -34,43 +34,13 @@ The target 'tag' follows the **Inside-outside-beginning (IOB)** tagging format. 
 **The B-indications (beginning) tag indicates that the token is the beginning of a disease entity (disease name in this case)
 An I-indications (inside) tag indicates that the token is inside an entity
 An O (outside) tag indicates that a token is outside a disease entity**
- 
-**Example**
-For more clarity, let's look at the same sample in the given tabular format, each row here corresponds to a word/token:
 
-The disease **'reactive hyperemia'** is labelled using **'B-indications'** for the word **'reactive'** and **'I-indications'** for the word **'hypermia'**. All the other words that are outside **'reactive hyperemia'** are labelled with **'O'.**
-
-
-## Evaluation Metric
-
-The evaluation for this contest is based on modified F1-Score as explained below:
-Suppose the ground truth has the following entities (mentioned in square brackets) for the given sentence
-
-**[Malaria] and [Yellow Fever] remain more deadly than [Hepatitis B] today**
-
-This has 3 entities.
-Supposing the actual prediction has the following
-
-**[Malaria] [and] [Yellow] Fever remain more deadly than Hepatitis B [today]**
-
-We have an exact match for Malaria, false positives for and and today, a false negative for Hepatitis B and a substring match for Yellow. We compute precision and recall by first defining matching criteria. We are also trying to reward partial match here and not just exact entity match.
-
-Here, True positives are of 2 types - Exact match and partial match and we are giving a weight of 1 to Exact Match and 0.5 to partial match. The computations are as follows:
-
-Exact Match = 1 (Malaria) and Partial Match = 1 ( Yellow which overlaps Yellow Fever), False Positives =2 (and, and today), False Negatives = 1 (Hepatitis B)
-
-**Precision** = (Exact Match + 0.5 * Partial Match) / (Exact Match + Partial Match + False Positives) = (1 + 0.5)/(1+1+2) = 0.375
-
-**Recall** = (Exact Match + 0.5 * Partial Match) / (Exact Match + Partial Match + False Negatives) = (1 + 0.5)/(1+1+1) = 0.50
-
-**F1 Score** = (2 * Precision * Recall)/(Precision + Recall) = 0.428
-
-
-The counts of exact match, partial match, false positives and false negatives is summed across all sentences in the test set and overall F1 Score is the leaderboard score.
-
-Please find the script for the evaluation metric implemented in Python at this [link](https://gist.github.com/frenzy2106/3a12b7fefeb33941edea45d881d6f81a) 
 
 # Approach
 
 * Tried NB with simple TF-ID features which gave ~58.XX
 * Used sklearn crf_suite and F1 score increased to ~75 and tried to build some more features which resulted in melt down, finally optimized parameters
+
+# Conclusion
+* Generating new features other than pos_tag didnt work, tried introducing length and 2-3 more features for which i lost score
+* Training and predicting time took a lot of toll :D
