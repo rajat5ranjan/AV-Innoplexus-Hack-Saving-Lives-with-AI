@@ -1,3 +1,4 @@
+![title](in.jpg)
 # Innoplexus Online Hiring Hackathon: Saving lives with AI
 Innoplexus Online Hiring Hackathon : Saving Lives with AI hosted by Analytics Vidya
 
@@ -67,4 +68,4 @@ Exact Match = 1 (Malaria) and Partial Match = 1 ( Yellow which overlaps Yellow F
 
 The counts of exact match, partial match, false positives and false negatives is summed across all sentences in the test set and overall F1 Score is the leaderboard score.
 
-Please find the script for the evaluation metric implemented in Python at this link https://gist.github.com/frenzy2106/3a12b7fefeb33941edea45d881d6f81a
+Please find the script for the evaluation metric implemented in Python at this [link](https://gist.github.com/frenzy2106/3a12b7fefeb33941edea45d881d6f81a) 
