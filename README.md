@@ -41,6 +41,12 @@ An O (outside) tag indicates that a token is outside a disease entity**
 * Tried NB with simple TF-ID features which gave ~58.XX
 * Used sklearn crf_suite and F1 score increased to ~75 and tried to build some more features which resulted in melt down, finally optimized parameters
 
+# Leaderboard
+
+* **[Public LB](https://datahack.analyticsvidhya.com/contest/innoplexus-online-hiring-hackathon-saving-lives-wi/lb)** : **17th Rank**
+* **[Private LB](https://datahack.analyticsvidhya.com/contest/innoplexus-online-hiring-hackathon-saving-lives-wi/pvt_lb)** : **22th Rank**
+
+
 # Conclusion
 * Generating new features other than pos_tag didnt work, tried introducing length and 2-3 more features for which i lost score
 * Training and predicting time took a lot of toll :D
