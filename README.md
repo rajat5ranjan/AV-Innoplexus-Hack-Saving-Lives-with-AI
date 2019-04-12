@@ -43,8 +43,8 @@ An O (outside) tag indicates that a token is outside a disease entity**
 
 # Leaderboard
 
-* **[Public LB](https://datahack.analyticsvidhya.com/contest/innoplexus-online-hiring-hackathon-saving-lives-wi/lb)** : **17th Rank**
-* **[Private LB](https://datahack.analyticsvidhya.com/contest/innoplexus-online-hiring-hackathon-saving-lives-wi/pvt_lb)** : **23th Rank**
+* **[Public LB](https://datahack.analyticsvidhya.com/contest/innoplexus-online-hiring-hackathon-saving-lives-wi/lb)** : **16th Rank**
+* **[Private LB](https://datahack.analyticsvidhya.com/contest/innoplexus-online-hiring-hackathon-saving-lives-wi/pvt_lb)** : **22th Rank**
 
 
 # Conclusion
